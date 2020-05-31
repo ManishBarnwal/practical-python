@@ -19,17 +19,17 @@ while principal > 0:
         principal = principal * (1 + rate/12) - payment - extra_payment
         total_paid = total_paid + payment + extra_payment
         remaining_principal = principal if principal > 0 else 0
-        print(current_month, 'total_paid:', total_paid, 'principal_remaining:', remaining_principal)
+        print(f'{current_month}, {total_paid:0.2f}, {remaining_principal:0.2f}')
     else:     
         principal = principal * (1 + rate/12) - payment
         total_paid = total_paid + payment
         remaining_principal = principal if principal > 0 else 0
-        print(current_month, 'total_paid:', total_paid, 'principal_remaining:', remaining_principal)
+        print(f'{current_month}, {total_paid:0.2f}, {remaining_principal:0.2f}')
 
     current_month = current_month + 1    
     num_required_months = num_required_months + 1
 
-print('Total paid', total_paid)
-print('No. of months required to pay the mortgage', num_required_months)
+print(f'Total paid: {total_paid:0.2f}')
+print(f'No. of months required to pay the mortgage: {num_required_months}')
 
 
